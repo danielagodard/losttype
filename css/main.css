@@ -1,0 +1,225 @@
+body{
+        background:		#e9df7f;
+	font-family:	Courier New, monospace;
+	font-size:		20px;
+	margin:			0;
+	padding:		0;
+}
+
+/* This is where the text appears
+ * and also where you write the message
+ */
+.console{
+	position:		absolute;
+	bottom:			115px;
+	left:			85px;
+	min-width:		727px;
+	width:			68%;
+	max-height:		75%;
+	line-height:	60px;
+	color:			#E9E5E1;
+	outline:		0;
+	cursor:			text;
+	overflow:		auto;
+}
+
+/* This is the placeholder in the textbox on the homepage 
+ * [currently set to: "Start typing..."]
+ */
+.console[placeholder]:empty:before{
+	content:		attr(placeholder);
+	color:			#E9E5E1;
+}
+
+/* This is the button that appears
+ * on the homepage 
+ */
+.submit_btn,.newmsg_btn{
+	display:		none;
+	position:		absolute;
+	bottom:			115px;
+	right:			85px;
+	width:			28%;
+	font-size:		24px;
+	line-height:	60px;
+	text-align:		right;
+	color:			#E9E5E1;
+	outline:		0;
+	cursor:			pointer;
+}.newmsg_btn{display:inline;}
+
+/* This is the message that appears 
+ * after you saved the message 
+ * [currently set to: "Copy the link"]
+ */
+.msglinkmsg{
+	position:		absolute;
+	bottom:			55px;
+	left:			85px;
+	min-width:		177px;
+	width:			28%;
+	height:			50px;
+	font-size:		30px;
+	color:			#E9E5E1;
+	text-align:		left;
+}
+
+/* This is the URL displayed after
+ * saving the message
+ */
+.msglink{
+	position:		absolute;
+	bottom:			55px;
+	right:			85px;
+	min-width:		727px;
+	width:			85%;
+	height:			50px;
+	background:		transparent;
+	font-size:		30px;
+	color:			#E9E5E1;
+	text-align:		right;
+	border:			0;
+}
+
+::-webkit-scrollbar{width:15px;height:15px;}
+::-webkit-scrollbar-button{background-color:#ccc;cursor:pointer;display:none;}
+::-webkit-scrollbar-track{border-radius:10px;}
+::-webkit-scrollbar-track-piece{background-color:#999;border-radius:10px;}
+::-webkit-scrollbar-thumb{height:50px;background-color:#F08080;border-radius:10px;cursor:arrow;}
+::-webkit-scrollbar-corner{background-color:#E9E5E1;}}
+::-webkit-resizer{background-color:#999;}
+
+/* These are adjustments, should the
+ * page be viewed with a lower resolution
+ * e.g. Tablet computer, Smartphone etc.
+ *
+ * NOTE:
+ * Same classnames as above but only
+ * the changes are applied
+ */
+@media(max-width:768px){
+	body{
+		font-size:		30px;
+	}
+	.console{
+		left:			20px;
+		bottom:			20px;
+		min-width:		508px;
+		line-height:	50px;
+	}
+	.submit_btn,.newmsg_btn{
+		bottom:			20px;
+		right:			20px;
+	}
+	.msglinkmsg{
+		top:			20px;
+		left:			20px;
+		min-width:		508px;
+		height:			30px;
+		font-size:		10px;
+	}
+	.msglink{
+		top:			55px;
+		right:			20px;
+		min-width:		508px;
+		height:			28px;
+		font-size:		24px;
+	}
+}
+/* iPhone 5/6/6+ landscape mode */
+@media(max-width:640px){
+	body{
+		font-size:		26px;
+	}
+	.console{
+		left:			10px;
+		bottom:			10px;
+		min-width:		500px;
+		line-height:	30px;
+	}
+	.submit_btn,.newmsg_btn{
+		top:			10px;
+		bottom:			unset;
+		right:			10px;
+		min-width:		500px;
+	}
+	.msglinkmsg{
+		top:			10px;
+		left:			10px;
+		min-width:		500px;
+		height:			30px;
+		font-size:		26px;
+	}
+	.msglink{
+		top:			45px;
+		right:			10px;
+		min-width:		500px;
+		height:			25px;
+		font-size:		22px;
+	}
+}
+/* iPhone 4/5 landscape mode and 6/6+ portrait mode */
+@media(max-width:480px){
+	body{
+		font-size:		22px;
+	}
+	.console{
+		left:			10px;
+		bottom:			10px;
+		min-width:		360px;
+		line-height:	26px;
+	}
+	.submit_btn,.newmsg_btn{
+		top:			10px;
+		bottom:			unset;
+		right:			10px;
+		min-width:		360px;
+	}
+	.msglinkmsg{
+		top:			10px;
+		left:			10px;
+		min-width:		360px;
+		height:			20px;
+		font-size:		22px;
+	}
+	.msglink{
+		top:			35px;
+		right:			10px;
+		min-width:		360px;
+		height:			20px;
+		font-size:		16px;
+	}
+}
+/* iPhone 4/5 portrait mode */
+@media(max-width:320px){
+	body{
+		font-size:		20px;
+	}
+	.console{
+		left:			10px;
+		bottom:			10px;
+		min-width:		300px;
+		line-height:	24px;
+	}
+	.submit_btn,.newmsg_btn{
+		top:			10px;
+		bottom:			unset;
+		right:			10px;
+		min-width:		300px;
+	}
+	.msglinkmsg{
+		top:			10px;
+		left:			10px;
+		min-width:		300px;
+		height:			20px;
+		font-size:		18px;
+	}
+	.msglink{
+		top:			35px;
+		right:			10px;
+		min-width:		300px;
+		height:			20px;
+		font-size:		12px;
+	}
+}
+		
