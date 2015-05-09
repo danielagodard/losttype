@@ -9,7 +9,7 @@
  <style>body{background:<?=$bg;?> !important;}</style>
 </head>
 
-<body onload="<?if(!isset($_POST['msg'])&&!isset($_GET['c'])){?>$m('console').focus();<?}elseif(isset($_GET['c'])&&$expires_in!=0){?>setTimeout(function(){FX.fadeOut($m('console'),{duration:2000,complete:function(){$m('console').innerHTML='This message has expired!';$m('console').style.opacity=100;}})},<?=$expires_in;?>);<?}elseif(isset($_POST['msg'])){?>$m('msglink').focus();$m('msglink').setSelectionRange(0,$m('msglink').value.length);<?}?>"<?if(isset($_POST['msg'])){?> onclick=""<?}elseif(!isset($_POST['msg'])&&!isset($_GET['c'])){?> onclick=""<?}?>>
+<body onload="<?if(!isset($_POST['msg'])&&!isset($_GET['c'])){?>$m('console').focus();<?}elseif(isset($_GET['c'])&&$expires_in!=0){?>setTimeout(function(){FX.fadeOut($m('console'),{duration:2000,complete:function(){$m('console').innerHTML='This message has expired!';$m('console').style.opacity=100;}})},<?=$expires_in;?>);<?}elseif(isset($_POST['msg'])){?>$m('msglink').focus();$m('msglink').setSelectionRange(0,$m('msglink').value.length);<?}?>"<?if(isset($_POST['msg'])){?> onclick="$m('msglink').focus();$m('msglink').setSelectionRange(0,$m('msglink').value.length);"<?}elseif(!isset($_POST['msg'])&&!isset($_GET['c'])){?> onclick="$m('console').focus();"<?}?>>
 
 <div id="console" class="console"<?if(!isset($_POST['msg'])&&!isset($_GET['c'])){?> placeholder="<?=$console_placeholder;?>" contenteditable="true" onKeyUp="checkField(this);"<?}?>><?=$msg;?></div>
 <?if(!isset($_POST['msg'])&&!isset($_GET['c'])){?>

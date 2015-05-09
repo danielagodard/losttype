@@ -151,23 +151,23 @@ if(isset($_POST['msg'])&&$_POST['msg']!=""){
 		//$msg=BB($msg);
 		
 		$mt=date('G',$array[1]);
-		if($mt>0&&$mt<4)$bg="#D8DDCE";
-		if($mt>4&&$mt<8)$bg="#C1D1BF";
-		if($mt>8&&$mt<12)$bg="A5BFAA#";
-		if($mt>12&&$mt<16)$bg="#7F9F8C";
-		if($mt>16&&$mt<20)$bg="#5B8672";
-		if($mt>20&&$mt<24)$bg="#20533F";
+		if($mt>0&&$mt<=4)$bg="#D8DDCE";
+		if($mt>4&&$mt<=8)$bg="#C1D1BF";
+		if($mt>8&&$mt<=12)$bg="#A5BFAA";
+		if($mt>12&&$mt<=16)$bg="#7F9F8C";
+		if($mt>16&&$mt<=20)$bg="#5B8672";
+		if($mt>20&&$mt<=24)$bg="#20533F";
 		
 		$msg=showMessage(showMessage($msg));
 		if($ret===false){$msg=$default_error_msg;}
 	}else{$msg=$default_warning_msg;}
 }else{
 	$mt=date('G',$now);
-	if($mt>0&&$mt<4)$bg="#D8DDCE";
-	if($mt>4&&$mt<8)$bg="#C1D1BF";
-	if($mt>8&&$mt<12)$bg="A5BFAA#";
-	if($mt>12&&$mt<16)$bg="#7F9F8C";
-	if($mt>16&&$mt<20)$bg="#5B8672";
-	if($mt>20&&$mt<24)$bg="#20533F";
+	if($mt>0&&$mt<=4)$bg="#D8DDCE";
+	if($mt>4&&$mt<=8)$bg="#C1D1BF";
+	if($mt>8&&$mt<=12)$bg="#A5BFAA";
+	if($mt>12&&$mt<=16)$bg="#7F9F8C";
+	if($mt>16&&$mt<=20)$bg="#5B8672";
+	if($mt>20&&$mt<=24)$bg="#20533F";
 }
 ?>
