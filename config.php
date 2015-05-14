@@ -1,4 +1,4 @@
-<?
+<?php
 /* Number of days to keep unviewed messages stored [minimum value: 1] */
 $daystokeepmsgs				= 5;
 /* Number of minutes per letter to keep a viewed message alive [minimum value: 1] */
