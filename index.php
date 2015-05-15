@@ -18,7 +18,7 @@
 <?php }elseif(isset($_POST['msg'])&&$_POST['msg']!=""){?>
 <span class="msglinkmsg">Copy The Link:</span><input type="text" id="msglink" class="msglink" value="http://<?php  echo $_SERVER[HTTP_HOST].dirname($_SERVER['PHP_SELF']);?><?php echo $code;?>" onmouseover="this.focus();this.setSelectionRange(0,this.value.length);" onclick="this.focus();this.setSelectionRange(0,this.value.length);" readonly="readonly" onkeydown="return false;" />
 <?php }elseif(isset($_GET['c'])&&$_GET['c']!=""){?>
-<div id="newmsg_btn" class="newmsg_btn" onclick="document.location.href='http://messages.danielagodard.com';">New message</div>
+<div id="newmsg_btn" class="newmsg_btn" onclick="document.location.href='http://losttype.co';">New message</div>
 <?php }?>
 
 <script src="./js/main.js"></script>
